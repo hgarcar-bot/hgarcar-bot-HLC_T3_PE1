@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="párcticahlc.css">
+  <title>Helena García Caro</title>
+
+
+</head>
+
+
+<body>
+
+  <!-- Contenido de la página -->
+  <header>
+    <nav>
+        <a id="btn1" href="prachlc1.html">Inicio</a> <br>
+    </nav>
+    <nav><a id="btn2" href="pachlc2.html">Información</a> <br>
+        </nav>
+        <nav><a id="btn3" href="practica_evaluable_1.html">Formulario</a> <br></nav>
+    </header>
+
+<h3>Formulario</h3>
+
+<div class="container">
+
+  <label for="nombre" >Nombre:</label><br>
+<input class="classlabel" type="text" id="nombre" required minlength="3" autocomplete="off" placeholder="Ingresa tu nombre"> <br> <br>
+  
+<label for="email">Email:</label> <br>
+    <input class="classlabel" type="text" id="email" autocomplete="off" required="@" placeholder="Ingresa tu correo" > <br><br>
+
+<label for="observaciones">Mensaje:</label> <br>
+<textarea id="" placeholder="Escribe tú mensaje aquí" autocomplete="off"></textarea> <br> <br>
+
+<button type="submit" class="classimput" id="tab">Enviar</button>
+
+</div>
+
+
+<!-- Fin contenido de la página -->
+
+  <script>
+    function showTabById(tabId) {
+      const tabs = document.querySelectorAll('.tab');
+      tabs.forEach(tab => {
+        tab.classList.toggle('active', tab.id === tabId);
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const buttons = document.querySelectorAll('.menu button');
+      buttons.forEach(button => {
+        button.addEventListener('click', () => {
+          const tabId = button.id.replace('btn', 'tab');
+          showTabById(tabId);
+        });
+      });
+    });
+
+
+    
+
+
+  </script>
+</body>
+</html>
